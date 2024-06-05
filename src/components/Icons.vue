@@ -22,15 +22,3 @@ export default {
 }
 </script>
 
-<style scoped lang="scss"> 
-
-.icons{
-    display: flex;
-    justify-content: center;
-    .icon{
-        width: 2.5%;
-        margin: 30px;
-    }
-}
-
-</style>

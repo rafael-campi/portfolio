@@ -8,7 +8,6 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import Perfil from './components/Perfil.vue'
 import Icons from './components/Icons.vue'
 import Apresentation from './components/Apresentation.vue'
@@ -18,7 +17,6 @@ export default {
   name: 'App',
   components: {
     LanguageSwitcher,
-    HelloWorld,
     Perfil,
     Icons,
     Apresentation,

@@ -1,5 +1,5 @@
 <template>
-    <div >
+    <div class="perfil">
         <img src="@/assets/me.jpg" alt="Rafael" >
     </div>
 </template>
@@ -10,9 +10,3 @@ export default {
   name: 'Perfil'
 }
 </script>
-<style scoped lang="scss">
-    img{
-        width: 10%;
-        border-radius: 100%;
-    }
-</style>
