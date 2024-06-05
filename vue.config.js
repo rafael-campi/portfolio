@@ -3,7 +3,7 @@ module.exports = {
         index: {
             // entry for the page
             entry: './src/main.js',
-            title: 'Rafael Campi',
+            title: 'Portfolio Rafael',
         },
     }
 }
