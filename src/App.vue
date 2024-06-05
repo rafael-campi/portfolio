@@ -1,5 +1,6 @@
 <template>
   <!-- <Logo/> -->
+  <LanguageSwitcher/>
   
   <Perfil/>
   <Apresentation/>
@@ -12,9 +13,11 @@ import Perfil from './components/Perfil.vue'
 import Icons from './components/Icons.vue'
 import Apresentation from './components/Apresentation.vue'
 import Logo from './components/Logo.vue'
+import LanguageSwitcher from './components/LanguageSwitcher.vue'
 export default {
   name: 'App',
   components: {
+    LanguageSwitcher,
     HelloWorld,
     Perfil,
     Icons,

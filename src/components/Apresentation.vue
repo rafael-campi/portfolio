@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <p class="apresentation">Desenvolvedor full-stack.</p>
+    <div class="apresentation">
+        <p class="text-apresentation">{{ $t('titleApresentation') }}</p>
     </div>
 </template>
 
@@ -20,7 +20,7 @@ p {
   font-weight: 600;
   font-style: normal;
 }
-.apresentation{
+.text-apresentation{
 
     color:#c3c8cb;
     font-weight: bold;
@@ -40,5 +40,8 @@ p {
     50% {
         border-color: transparent;
     }
+}
+.apresentation{
+    padding:0% 30% 0% 30%;
 }
 </style>

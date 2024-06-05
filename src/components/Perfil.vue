@@ -5,9 +5,9 @@
 </template>
 
 <script>
+
 export default {
-  name: 'Perfil',
-  
+  name: 'Perfil'
 }
 </script>
 <style scoped lang="scss">
