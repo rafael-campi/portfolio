@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p class="apresentation">Me chamo Rafael.</p>
+        <p class="apresentation">Desenvolvedor full-stack.</p>
     </div>
 </template>
 
