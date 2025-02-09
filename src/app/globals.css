@@ -2,20 +2,141 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Estilização da scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4B5563;
+}
+
+/* Animação suave para todos os elementos interativos */
+a, button {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Grid Pattern */
+.bg-grid-pattern {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+/* Cards */
+.glass-card {
+  @apply bg-slate-800/50 backdrop-blur-sm border border-slate-700/50;
+}
+
+/* Efeito de hover suave nos cards */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Noise Texture */
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.4;
+}
+
+/* Animações personalizadas */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.1);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Suavizar todas as transições */
+* {
+  @apply transition-colors duration-200;
+}
+
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-1;
+}
+
+/* Dots Pattern */
+.bg-dots-pattern {
+  background-image: radial-gradient(circle, #ffffff 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Cards e Containers */
+.glass-effect {
+  @apply bg-gray-900/40 backdrop-blur-sm border border-gray-800/50;
+}
+
+.section-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Gradientes de texto e bordas */
+.gradient-border {
+  @apply border-l-2 border-gradient-br;
+}
+
+.border-gradient-br {
+  border-image: linear-gradient(to bottom right, #6366f1, #a855f7) 1;
+}
+
+/* Animações suaves */
+.hover-translate {
+  @apply transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg;
+}
+
+/* Tipografia */
+.heading-gradient {
+  @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent;
+}
+
+/* Botões */
+.btn-primary {
+  @apply px-6 py-2 rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 
+         hover:from-indigo-500 hover:to-purple-500 transition-all duration-300
+         shadow-md hover:shadow-xl text-white font-medium;
+}
+
+.btn-outline {
+  @apply px-6 py-2 rounded-lg border border-gray-700 hover:border-gray-600
+         bg-transparent hover:bg-gray-800/50 transition-all duration-300
+         text-gray-300 hover:text-white font-medium;
+}
+
